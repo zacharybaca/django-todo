@@ -55,7 +55,7 @@ def createtodo(request):
             newtodo.save()
             return redirect('currenttodos')
         except ValueError:
-            return render(request, 'createtodo.html', {'form': TodoForm()}, {'error': 'Bad Data'})
+            return render(request, 'createtodo.html', {'form': TodoForm(), 'error': 'Bad Data'})
 
 
 def currenttodos(request):
